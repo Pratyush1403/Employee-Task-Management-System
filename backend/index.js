@@ -49,7 +49,10 @@ app.post("/signin", async (req, res) => {
       if (employee) {
         return res.status(200).json(employee);
       }
-      return res.status(404).json({ result: 'No User Found' });
+      else{
+        return res.status(200).json({ result: "No User Found" });
+      }
+      
     } else {
       return res.status(400).json({ error: "Missing email or password" });
     }
