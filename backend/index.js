@@ -50,7 +50,7 @@ app.post("/signin", async (req, res) => {
         return res.status(200).json(employee);
       }
       else{
-        return res.status(200).json({ result: "No User Found" });
+        return res.status(201).json({ result: "No User Found" });
       }
       
     } else {
